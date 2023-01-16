@@ -1,14 +1,14 @@
 board = [" ", "-", "-", "-", "-", "-", "-", "-", "-", "-"]
 Running = True
 def create_board():
-    print(board[1] + board[2] + board[3])
-    print(board[4] + board[5] + board[6])
-    print(board[7] + board[8] + board[9])
+    print(board[1] + ' ' + board[2] + ' ' + board[3])
+    print(board[4] + ' ' + board[5] + ' ' + board[6])
+    print(board[7] + ' ' + board[8] + ' ' + board[9])
 
 
 create_board()
 
-
+#victory conditon
 def wincon():
     global Running
     if board[1] == board[2] == board[3] and "-" not in board[1:3] or \
@@ -35,7 +35,7 @@ def draw():
             print("DRAW")
             pass
 
-
+#player 2 fonction
 def playerinput():
     while Running:
         ch = input("PlayerX: Choose a number between 1-9")
@@ -58,7 +58,7 @@ def playerinput():
 
 playerinput()
 
-
+#player 2 fonction
 def player2input():
     while Running:
         ch = input("Player0: Choose a number between 1-9")
@@ -81,7 +81,7 @@ def player2input():
 
 player2input()
 
-
+#turn fonction for player 1 and 2
 def turn():
     while Running:
         if playerinput() == True:
